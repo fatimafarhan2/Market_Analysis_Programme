@@ -1,0 +1,35 @@
+# ===========================
+# Core dependencies for all members
+# ===========================
+supabase
+python-dotenv
+langchain
+langgraph
+langsmith
+openai
+pandas
+numpy
+requests
+loguru
+pytest
+
+# ===========================
+# Additional / optional dependencies
+# ===========================
+tqdm
+typing-extensions
+
+# ===========================
+# Visualization (Mahnoor)
+# ===========================
+# matplotlib
+# seaborn
+# plotly
+# streamlit
+
+# ===========================
+# AI/Analysis (Haiqa)
+# ===========================
+# scikit-learn
+torch
+# transformers
