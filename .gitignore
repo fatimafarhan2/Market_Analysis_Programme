@@ -1,0 +1,82 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+*.tmp
+*.sqlite3
+.DS_Store
+
+# ===========================
+# Environments
+# ===========================
+env/
+envs/
+.venv/
+venv/
+.env
+*.env
+
+# uv virtual environment
+.uv/
+uv.lock
+
+# ===========================
+# Supabase
+# ===========================
+# (Local SQL migrations or credentials)
+supabase/.env
+supabase/temp/
+supabase/.supabase/
+supabase/functions/.env
+
+# ===========================
+# OS / IDE files
+# ===========================
+Thumbs.db
+*.bak
+*.swp
+*.swo
+.vscode/
+.idea/
+*.code-workspace
+
+# ===========================
+# Jupyter / Notebooks (optional)
+# ===========================
+.ipynb_checkpoints/
+*.ipynb
+
+# ===========================
+# Data
+# ===========================
+data/raw/
+data/processed/
+data/samples/
+*.csv
+*.xlsx
+*.parquet
+
+# ===========================
+# Cache & Build
+# ===========================
+build/
+dist/
+.cache/
+pytest_cache/
+*.coverage
+.coverage.*
+
+# ===========================
+# Project-specific
+# ===========================
+# Ignore user-specific virtual envs inside envs/
+envs/fatima_env/
+envs/haiqa_env/
+envs/mahnoor_env/
