@@ -1,0 +1,34 @@
+"| Column Name                                                              | Filter Type           | Explanation / Example Values                                                       |
+| ------------------------------------------------------------------------ | --------------------- | ---------------------------------------------------------------------------------- |
+| category                                                                 | Categorical           | Product category (e.g., haircare, skincare, bodycare). Use to filter product type. |
+| key_function                                                             | Categorical           | Product function/purpose (e.g., hydration, repair, anti-aging).                    |
+| price_range                                                              | Categorical / Numeric | Price bucket or range (e.g., low, medium, high;).                     |
+| brand_name / brand_id                                                    | Categorical           | Filter by specific brand (e.g., Estee Lauder, Nykaa Matte Lipstick).                              |
+| product_name / product_id                                                | Categorical           | Specific product filter (e.g., “Matte Lipstick”).                                  |
+| country_name / country_id                                                | Categorical           | Filter by country (e.g., Japan, Pakistan).                                         |
+| region                                                                   | Categorical           | Geographical region (e.g., Asia, Europe).                                          |
+| currency                                                                 | Categorical           | Currency type (e.g., USD, JPY).                                                    |
+| dominant_distribution_channel                                            | Categorical           | Main sales channel (e.g., Online, Offline).                                        |
+| is_banned                                                                | Boolean               | Filter products that are banned or not (true/false).                               |
+| verified_purchase                                                        | Boolean               | Only consider verified reviews (true/false).                                       |
+| avg_rating                                                               | Numeric               | Customer rating (1–5), filter min/max values.                                      |
+| avg_sentiment_score                                                      | Numeric               | Review sentiment score (range: negative–positive).                                 |
+| total_num_reviews                                                        | Numeric               | Total reviews count, filter by popularity thresholds.                              |
+| units_sold / net_units_sold / total_units_sold                           | Numeric               | Filter by sales volume.                                                            |
+| revenue_usd / net_revenue_usd / total_revenue_usd / avg_revenue_usd      | Numeric               | Filter by revenue range.                                                           |
+| avg_price_usd                                                            | Numeric               | Average product price, use for price-based filtering.                              |
+| marketing_spend_usd / marketing_spend_per_unit / avg_marketing_spend_usd | Numeric               | Filter by marketing investment (low/high).                                         |
+| marketing_efficiency_ratio / avg_marketing_efficiency_ratio              | Numeric               | Marketing efficiency filter (high/low).                                            |
+| return_on_marketing_spend / avg_return_on_marketing_spend                | Numeric               | Marketing ROI filter.                                                              |
+| returns_rate / avg_returns_rate / return_count_estimate                  | Numeric               | Filter by product returns (quality/satisfaction).                                  |
+| search_to_sales_ratio                                                    | Numeric               | Filter by conversion efficiency (searches vs actual sales).                        |
+| searched_times                                                           | Numeric               | Filter by search popularity.                                                       |
+| online_sales_ratio / avg_online_sales_ratio                              | Numeric               | Filter by share of online sales.                                                   |
+| population_millions / avg_population_millions                            | Numeric               | Filter by country market size.                                                     |
+| avg_income_usd                                                           | Numeric               | Filter by average income in USD.                                                   |
+| urbanization_rate / avg_urbanization_rate                                | Numeric               | Filter by urban population proportion.                                             |
+| online_shopping_penetration / avg_online_shopping_penetration            | Numeric               | Filter by online shopping adoption.                                                |
+| female_population_percent                                                | Numeric               | Filter by percentage of female population in the market.                           |
+| sustainability_index                                                     | Numeric               | Filter brands by sustainability ranking.                                           |
+| founded_year                                                             | Numeric               | Filter brands by founding year (age of brand).                                     |
+"
