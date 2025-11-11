@@ -112,7 +112,7 @@ def normalize_and_validate(rows: List[Dict[str, Any]]) -> pd.DataFrame:
 
     return df
 @tool
-def swot_analysis():
+def swot_analysis(query: str) -> Dict[str, Any]:
     """
     Perform a structured SWOT (Strengths, Weaknesses, Opportunities, Threats) analysis
     for a selected brand within a competitive dataset of cosmetic or product market data.

@@ -1,5 +1,5 @@
 # app/data_fetching/tests/run_pipeline.py
-from app.data_fetching.services.nodes import run_data_fetching
+from app.test import run_data_fetching
 
 if __name__ == "__main__":
     print("Starting interactive data fetching pipeline...")

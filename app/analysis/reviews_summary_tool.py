@@ -1,11 +1,11 @@
 #reviews_summary_tool.py
-
+from app.data_fetching.services.db_connect import supabase as supabase_client
 import re
 import json
 import pandas as pd
 from typing import Dict, Any, List
 from langchain_core.tools import tool
-from db_connect import supabase
+from app.data_fetching.services.db_connect import supabase
 from typing import Annotated
 
 # -----------------------
@@ -79,7 +79,7 @@ def _to_df(rows: List[Dict[str, Any]]) -> pd.DataFrame:
 # -----------------------
 # Core logic function
 # -----------------------
-def get_reviews_summary(supabase_client=None) -> Dict[str, Any]:
+def get_reviews_summary() -> Dict[str, Any]:
     """
     Core function to fetch and aggregate reviews from 'reviews_ftable_m'.
     Groups identical product records and collects all reviews in a list.
@@ -118,14 +118,14 @@ def get_reviews_summary(supabase_client=None) -> Dict[str, Any]:
 # LangChain-compatible Tool
 # -----------------------
 # LangChain-compatible Tool (v0.1.x)
-@tool(return_direct=False)
-def fetch_reviews_summary(supabase_client=None) -> Dict[str, Any]:
+@tool
+def fetch_reviews_summary(query: str) -> Dict[str, Any]:
     """
     Fetch and aggregate product reviews from 'reviews_ftable_m'.
     LangChain tool wrapper for get_reviews_summary().
     """
     print("Invoking fetch_reviews_summary tool...")
-    return get_reviews_summary(supabase_client)
+    return get_reviews_summary()
 
 
 # -----------------------

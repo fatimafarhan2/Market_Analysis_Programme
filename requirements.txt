@@ -3,13 +3,9 @@
 # ===========================
 supabase
 python-dotenv
-langchain
-langgraph
-langsmith
 openai
 pandas
 numpy
-requests
 loguru
 pytest
 
@@ -31,5 +27,5 @@ typing-extensions
 # AI/Analysis (Haiqa)
 # ===========================
 # scikit-learn
-torch
+# torch
 # transformers

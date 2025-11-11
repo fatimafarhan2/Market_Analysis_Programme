@@ -48,9 +48,8 @@ def input_node(state: PipelineState, **kwargs):
     temp_query_holder["error"] = None
     temp_query_holder["loop_back"] = False
 
-    print(f"✓ Received query: {temp_query_holder['user_query']}")
+    print(f" Received query: {temp_query_holder['user_query']}")
     
-    # CRITICAL FIX: Copy query to state so other nodes can access it
     return {
         **state,
         "user_query": temp_query_holder["user_query"],
@@ -150,8 +149,8 @@ def validation_node(state: PipelineState, **kwargs):
 
     # Success - update state with results
     result_data = validation_output.get("data", [])
-    print("✓ Validation and execution successful!")
-    print(f"📊 Result sample: {str(result_data)[:250]} ...")
+    print(" Validation and execution successful!")
+    print(f"Result sample: {str(result_data)[:250]} ...")
     
     return {
         **state,
@@ -162,16 +161,16 @@ def validation_node(state: PipelineState, **kwargs):
 
 def insert_node(state: PipelineState):
     if state.get("error"):
-        print("⊘ Skipping insert due to previous error.")
+        print("Skipping insert due to previous error.")
         return state
 
     data_to_insert = state.get("result")
     if not data_to_insert:
-        print("⊘ No data to insert.")
+        print("No data to insert.")
         return state
 
     table_name = "product_flat_table"
-    print(f"\n💾 Step 4: Inserting data into {table_name}...")
+    print(f"\n Step 4: Inserting data into {table_name}...")
 
     try:
         # Clear old data

@@ -3,11 +3,11 @@ from langchain_core.tools import tool
 import re
 import json
 from typing import Dict, Any, List, Optional
-from db_connect import supabase      # if filename is db_connect.py
-# from app.data_fetching.services.db_connect import supabase
+# from db_connect import supabase      # if filename is db_connect.py
+from app.data_fetching.services.db_connect import supabase
 import numpy as np
 import pandas as pd
-from scipy import stats
+# from scipy import stats
 from typing import Annotated
 
 def _clean_sql_for_rpc(sql: str) -> str:
@@ -150,8 +150,9 @@ def _market_shares(df: pd.DataFrame, group_by: List[str], value_col: str = "tota
 # -----------------------
 # Core deep-analysis function
 # -----------------------
+
 @tool
-def deep_market_analysis() -> Dict[str, Any]:
+def deep_market_analysis(query: str) -> Dict[str, Any]:
     """
     Perform in-depth analysis on product_flat_table (assumes data is already the 'slice' you want).
     - supabase_client: if None, uses imported `supabase` from db_connect

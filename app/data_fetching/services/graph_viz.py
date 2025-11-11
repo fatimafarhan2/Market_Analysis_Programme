@@ -1,4 +1,4 @@
-from app.data_fetching.services.nodes import build_pipeline
+from app.test import build_pipeline
 graph = build_pipeline()
 
 # save as PNG
