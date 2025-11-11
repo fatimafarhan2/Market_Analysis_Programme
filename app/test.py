@@ -7,7 +7,7 @@ import json
 import os
 from dotenv import load_dotenv
 from supabase import create_client
-
+from app.visualization.viz_node import visualization_node
 # LangChain Groq import
 from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage, ToolMessage
@@ -350,7 +350,7 @@ def build_pipeline():
     graph.add_node("insert_node", insert_node)
     graph.add_node("generator", node_generator)
     graph.add_node("reflector", node_reflector)
-
+    graph.add_node("visualization", visualization_node)
     # Connect nodes
     graph.add_edge(START, "input_node")
     graph.add_edge("input_node", "intent_node")
@@ -368,8 +368,9 @@ def build_pipeline():
     graph.add_edge("insert_node", "generator")
 
     # ReAct agent loop
-    graph.add_conditional_edges("generator", should_continue, ["reflector", END])
+    graph.add_conditional_edges("generator", should_continue, ["reflector", "visualization"])
     graph.add_edge("reflector", "generator")
+    graph.add_edge("visualization",END)
 
     return graph.compile()
 
