@@ -150,7 +150,7 @@ def _market_shares(df: pd.DataFrame, group_by: List[str], value_col: str = "tota
 # -----------------------
 
 
-def deep_market_analysis() -> Dict[str, Any]:
+def deep_analysis() -> Dict[str, Any]:
     """
     Perform in-depth analysis on product_flat_table (assumes data is already the 'slice' you want).
     - supabase_client: if None, uses imported `supabase` from db_connect
@@ -162,7 +162,7 @@ def deep_market_analysis() -> Dict[str, Any]:
     sup = supabase
     results: Dict[str, Any] = {"notes": "Deep market analysis", "errors": []}
 
-    print("Running deep_market_analysis...")
+    print("Running deep_analysis...")
     rows = _run_sql(sup, _PRODUCT_FLAT_SELECT)
     df = _to_df(rows)
     results["meta_rows_fetched"] = len(df)
@@ -330,6 +330,6 @@ def deep_market_analysis() -> Dict[str, Any]:
 # -----------------------
 if __name__ == "__main__":
     # local test (ensure environment variables or db_connect provides supabase)
-    print("Running deep_market_analysis as script...")
-    out = deep_market_analysis()
+    print("Running deep_analysis as script...")
+    out = deep_analysis()
     print(json.dumps(out, indent=2, default=lambda x: (round(x, 3) if isinstance(x, float) else str(x))))

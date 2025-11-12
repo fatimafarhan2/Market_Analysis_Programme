@@ -1,0 +1,63 @@
+{
+  "text_summary": {
+    "user_query": "analyze the lipstick industry in france and pakistan",
+    "executive_summary": "The lipstick industry in France and Pakistan has a total revenue of $233,266,522.11, with 8,600,695 units sold. The average rating of lipsticks in these countries is 4.004, with an average sentiment score of 0.336. The top brands in the industry are Bioderma, Sunsilk, and L'Oreal.",
+    "detailed_analysis": "The deep market analysis reveals that the lipstick industry in France and Pakistan has a total of 27 brands and 42 products. The average revenue per brand is $8,623,191.19, with an average of 318,148 units sold per brand. The top regions in terms of revenue are Asia and Europe, with total revenues of $120,263,905.20 and $113,002,616.91, respectively. The average rating of lipsticks in Asia is 4.011, while in Europe it is 3.998. The swot analysis was unable to be completed due to an error. The reviews summary reveals that the top products in the industry are Matte Lipstick - L'O660, Matte Lipstick - SUN190, and Matte Lipstick - BIO284, with average ratings of 4.035, 4.033, and 4.036, respectively.",
+    "key_insights": [
+      "The lipstick industry in France and Pakistan has a high average rating of 4.004, indicating a high level of customer satisfaction.",
+      "The top brands in the industry are Bioderma, Sunsilk, and L'Oreal, which account for a significant portion of the total revenue.",
+      "The average sentiment score of lipsticks in these countries is 0.336, which is relatively low and indicates a need for improvement in terms of customer sentiment.",
+      "The reviews summary reveals that the top products in the industry are Matte Lipstick - L'O660, Matte Lipstick - SUN190, and Matte Lipstick - BIO284, which have average ratings of 4.035, 4.033, and 4.036, respectively."
+    ],
+    "recommendations": [
+      "Increase marketing efforts to improve customer sentiment and increase brand awareness.",
+      "Expand product lines to include more shades and finishes to cater to a wider range of customers.",
+      "Improve product quality to increase customer satisfaction and loyalty.",
+      "Conduct further market research to identify trends and opportunities in the lipstick industry."
+    ]
+  },
+  "visualizations": [
+    {
+      "filename": "country_revenue.png",
+      "path": "charts/country_revenue.png",
+      "title": "Country Revenue",
+      "chart_name": "country_revenue",
+      "insights": "Total revenue: $233,266,522.11\nHighest revenue: Pakistan ($120,263,905.20)\nLowest revenue: France ($113,002,616.91)",
+      "url": "/api/charts/country_revenue.png"
+    },
+    {
+      "filename": "brand_market_share.png",
+      "path": "charts/brand_market_share.png",
+      "title": "Brand Market Share",
+      "chart_name": "brand_market_share",
+      "insights": "Top brand: Bioderma (0.08674899208407458% share)\nBrands included: Bioderma, Sunsilk, O.P.I, L'Oreal, Etude House",
+      "url": "/api/charts/brand_market_share.png"
+    },
+    {
+      "filename": "top_products_revenue.png",
+      "path": "charts/top_products_revenue.png",
+      "title": "Top Products Revenue",
+      "chart_name": "top_products_revenue",
+      "insights": "Top product: Matte Lipstick - L'O660 ($4,268,479.73)\nProducts included: Matte Lipstick - L'O660, Matte Lipstick - SUN190, Matte Lipstick - BIO284, Matte Lipstick - EST165, Matte Lipstick - ETU257",
+      "url": "/api/charts/top_products_revenue.png"
+    },
+    {
+      "filename": "correlation_heatmap.png",
+      "path": "charts/correlation_heatmap.png",
+      "title": "Correlation Heatmap",
+      "chart_name": "correlation_heatmap",
+      "insights": "Top correlations:\ntotal_revenue_usd        avg_marketing_spend_usd    0.975\navg_marketing_spend_usd  total_revenue_usd          0.975\n                         total_units_sold           0.732\ntotal_units_sold         avg_marketing_spend_usd    0.732\n                         total_revenue_usd          0.731",
+      "url": "/api/charts/correlation_heatmap.png"
+    }
+  ],
+  "metadata": {
+    "tools_used": [
+      "deep_market_analysis",
+      "swot_analysis",
+      "fetch_reviews_summary"
+    ],
+    "iterations": 5,
+    "total_charts": 4,
+    "data_rows": 84
+  }
+}

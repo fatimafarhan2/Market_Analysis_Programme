@@ -1,0 +1,89 @@
+Here's a professionally formatted and beautified version of your market analysis report:
+
+---
+
+## Market Analysis Report: Lipstick Industry in France and Pakistan
+
+**Date:** October 26, 2023
+**Prepared For:** [Recipient/Department, e.g., Global Marketing Team]
+**Prepared By:** [Your Name/Department]
+
+---
+
+### 1. Executive Summary
+
+This report provides a comprehensive overview of the lipstick industry in France and Pakistan. The combined market demonstrates significant activity, generating a total revenue of **$233,266,522.11** from **8,600,695 units sold**. Customer satisfaction is generally high, reflected by an average product rating of **4.00 out of 5**. However, the average sentiment score of **0.34** suggests an opportunity for brands to enhance emotional connection and perception. **Bioderma, Sunsilk, and L'Oreal** are identified as the leading brands in this dynamic sector.
+
+---
+
+### 2. Detailed Analysis
+
+#### 2.1. Market Structure
+
+The lipstick industry across France and Pakistan is characterized by a competitive landscape, comprising **27 distinct brands** offering a total of **42 products**. On average, each brand generates approximately **$8,623,191.19** in revenue and sells an average of **318,148 units**.
+
+#### 2.2. Regional Performance
+
+Revenue distribution highlights both countries as significant contributors to the overall market:
+
+*   **Pakistan (Asia):**
+    *   Total Revenue: **$120,263,905.20**
+    *   Average Product Rating: **4.01**
+*   **France (Europe):**
+    *   Total Revenue: **$113,002,616.91**
+    *   Average Product Rating: **4.00**
+
+#### 2.3. Product Performance & Reviews Summary
+
+Customer reviews indicate strong performance for specific products, particularly those with a matte finish:
+
+*   **Matte Lipstick - BIO284:** Average Rating: **4.04**
+*   **Matte Lipstick - L'O660:** Average Rating: **4.04**
+*   **Matte Lipstick - SUN190:** Average Rating: **4.03**
+
+*Note: A comprehensive SWOT analysis could not be completed due to data limitations.*
+
+---
+
+### 3. Key Insights
+
+*   **High Customer Satisfaction:** An overall average rating of **4.00** across both markets suggests a generally positive reception of lipstick products by consumers.
+*   **Dominant Brands:** **Bioderma, Sunsilk, and L'Oreal** hold significant market influence, indicating strong brand loyalty or effective market penetration.
+*   **Opportunity for Sentiment Improvement:** The relatively low average sentiment score of **0.34** points to an area where brands can focus on enhancing emotional connection and overall positive perception beyond just product quality.
+*   **Matte Finish Popularity:** The consistent appearance of 'Matte Lipstick' products among the top-rated items suggests a strong consumer preference for matte finishes in these markets.
+
+---
+
+### 4. Recommendations
+
+Based on the analysis, the following strategic recommendations are proposed:
+
+*   **Enhance Brand Sentiment:** Implement targeted marketing campaigns focusing on emotional appeal, user-generated content, and addressing common customer pain points to elevate the average sentiment score.
+*   **Diversify Product Offerings:** Expand product lines to include a broader range of shades, finishes (beyond matte), and formulations to capture a wider demographic and cater to evolving consumer preferences.
+*   **Prioritize Product Quality & Innovation:** Continuously invest in research and development to improve product quality, longevity, and ingredient transparency, thereby reinforcing customer satisfaction and loyalty.
+*   **Conduct In-depth Market Research:** Undertake further qualitative and quantitative research to identify emerging trends, untapped market segments, and competitive strategies within the French and Pakistani lipstick markets.
+
+---
+
+### 5. Visual Data Summary
+
+#### 5.1. Country Revenue Distribution
+*   **Total Market Revenue:** $233,266,522.11
+*   **Highest Revenue:** Pakistan ($120,263,905.20)
+*   **Lowest Revenue:** France ($113,002,616.91)
+
+#### 5.2. Brand Market Share (Top 5)
+*   **Leading Brand:** Bioderma (8.67% share)
+*   **Other Key Brands:** Sunsilk, O.P.I, L'Oreal, Etude House
+*(Note: The provided share for Bioderma is 8.67%, indicating a significant presence for a single brand.)*
+
+#### 5.3. Top Products by Revenue (Top 5)
+*   **Highest Revenue Product:** Matte Lipstick - L'O660 ($4,268,479.73)
+*   **Other High-Performing Products:** Matte Lipstick - SUN190, Matte Lipstick - BIO284, Matte Lipstick - EST165, Matte Lipstick - ETU257
+
+#### 5.4. Key Correlations (from Heatmap)
+*   **Strong Positive Correlation (0.975) between Total Revenue and Average Marketing Spend:** This indicates that higher marketing investment is strongly associated with increased total revenue.
+*   **Positive Correlation (0.732) between Average Marketing Spend and Total Units Sold:** Suggests that marketing efforts also effectively drive sales volume.
+*   **Positive Correlation (0.731) between Total Units Sold and Total Revenue:** As expected, higher unit sales directly contribute to higher total revenue.
+
+---

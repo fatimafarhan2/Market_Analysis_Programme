@@ -5,7 +5,7 @@ top5_brands_by_revenue.py
 Fetch top 20 brands from product_flat_table by total_revenue_usd,
 filtered to a specific country (provided by user).
 """
-
+from app.data_fetching.agents.intent_agent import EXTRACTED_COUNTRIES,EXTRACTED_PRODUCTS
 import os
 from typing import Annotated
 import json
@@ -40,8 +40,7 @@ COLUMNS = ",".join([
     "country_id","country_name","region","currency"
 ])
 
-PRODUCT = "Shampoo"
-COUNTRY = "Japan"
+
 
 def rows_to_json_safe_all_columns(df: pd.DataFrame) -> List[Dict[str, Any]]:
     """Convert DataFrame rows to a JSON-safe list."""
@@ -168,9 +167,9 @@ def swot_analysis(query: str) -> Dict[str, Any]:
 
     # INTEGRATION POINT: fetch product and country from globals or state
     # Expect product / country to be available in the generator's state as globals.
-    product = "shampoo"  # e.g., shampoo
-    country = "Japan"
-    
+  
+    product=EXTRACTED_PRODUCTS[0]
+    country=EXTRACTED_COUNTRIES[0]
     if product is None and country is None:
         # If both are missing, still try an empty fetch (will return nothing) but warn.
         print("Warning: PRODUCT and COUNTRY not found in globals. Attempting fetch without filters.")

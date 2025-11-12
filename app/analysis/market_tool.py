@@ -160,7 +160,7 @@ def deep_market_analysis(query: str) -> Dict[str, Any]:
     - per_scope_limit: number of groups shown in top lists
     Returns a JSON-serializable dict of results.
     """
-    per_scope_limit = 5
+    per_scope_limit = 3
     sup = supabase
     results: Dict[str, Any] = {"notes": "Deep market analysis", "errors": []}
 
@@ -271,59 +271,6 @@ def deep_market_analysis(query: str) -> Dict[str, Any]:
     country_revenue = country_grp.groupby("country_name")["total_revenue_usd"].sum().reset_index()
     results["hhi_by_country"] = _herfindahl_index(country_revenue, "total_revenue_usd")
 
-   
-    corr_cols = [
-        "total_revenue_usd", "total_units_sold", "avg_marketing_spend_usd",
-        "avg_marketing_efficiency_ratio", "avg_return_on_marketing_spend",
-        "avg_online_sales_ratio", "avg_rating", "avg_sentiment_score"
-    ]
-    corr_df = df[corr_cols].dropna()
-    if not corr_df.empty and corr_df.shape[0] > 1:
-        corr_mat = corr_df.corr(method="pearson")
-        results["correlation_matrix"] = corr_mat.round(3).to_dict()
-    else:
-        results["correlation_matrix"] = {}
-    # -----------------------
-    # Strategy insights
-    # -----------------------
-    strategy_insights = []
-
-   
-    if not brand_grp.empty:
-        median_rev = brand_grp["total_revenue_usd"].median()
-        for _, row in brand_grp.iterrows():
-            sentiment = row.get("avg_sentiment", 0)
-            revenue = row.get("total_revenue_usd", 0)
-            if sentiment and revenue and sentiment > 0.6 and revenue < median_rev:
-                strategy_insights.append({
-                    "type": "opportunity",
-                    "text": f"Brand {row['brand_name']} in {row['country_name']} has above-average sentiment ({round(sentiment, 3)}) "
-                            f"but revenue ({round(revenue,2)}) below median ({round(median_rev,2)}).",
-                    "brand": row["brand_name"],
-                    "country": row["country_name"],
-                    "sentiment": round(sentiment,3),
-                    "revenue": round(revenue,2)
-                })
-
-    for _, r in region_grp.iterrows():
-        avg_roms = r.get("avg_roms", 0)
-        if avg_roms is not None and avg_roms < 1.0:
-            strategy_insights.append({
-                "type": "inefficient_marketing",
-                "text": f"Region {r['region']} has avg ROMS = {round(avg_roms,3)} < 1. Consider reallocating marketing spend.",
-                "region": r["region"],
-                "avg_roms": round(avg_roms,3)
-            })
-
-
-    hhi_brand = results.get("hhi_by_brand", 0)
-    if hhi_brand and hhi_brand > 2500:
-        strategy_insights.append({
-            "type": "concentration",
-            "text": f"High market concentration by brand (HHI={round(hhi_brand,2)}). Top brands dominate revenue."
-        })
-
-    results["strategy_insights"] = strategy_insights
 
     return results
 

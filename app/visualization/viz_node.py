@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from app.visualization.market_tool import deep_market_analysis
 import os
+from app.test import PipelineState
 
-def visualization_node():
+def visualization_node(state: PipelineState, **kwargs):
     analysis = deep_market_analysis()
     
-    # 1️⃣ Country Revenue Comparison
     country_data = pd.DataFrame(analysis['country_market_share_topN'])
     plt.figure(figsize=(8, 5))
     plt.bar(country_data['country_name'], country_data['total_revenue_usd'], color='skyblue')
@@ -19,7 +19,7 @@ def visualization_node():
     plt.savefig('charts/country_revenue.png')
     plt.close()
 
-    # 2️⃣ Brand Market Share Pie Chart
+
     brand_data = pd.DataFrame(analysis['brand_market_share_topN'])
     plt.figure(figsize=(7, 7))
     plt.pie(brand_data['share'], labels=brand_data['brand_name'], autopct='%1.1f%%', startangle=140)
@@ -28,7 +28,6 @@ def visualization_node():
     plt.savefig('charts/brand_market_share.png')
     plt.close()
 
-    # 3️⃣ Correlation Heatmap
     corr_data = pd.DataFrame(analysis['correlation_matrix'])
     plt.figure(figsize=(8, 6))
     plt.imshow(corr_data, cmap='coolwarm', interpolation='nearest')
@@ -40,7 +39,7 @@ def visualization_node():
     plt.savefig('charts/correlation_heatmap.png')
     plt.close()
 
-    print("✅ Visualizations saved in 'charts/' folder")
+    print("Visualizations saved in 'charts/' folder")
 
 # Run locally
 if __name__ == "__main__":
